@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog", 
+    "lab": "AI Lab",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Wim Tilburgs",
+    "subtitle": "Smart Health AI Consultant",
+    "tagline": "From 125kg diabetic to AI health pioneer",
+    "description": "From patient to pioneer. Discover how I overcame diabetes and now use AI for revolutionary healthcare solutions.",
+    "cta": {
+      "primary": "Discover My Story",
+      "secondary": "View AI Research"
+    }
+  },
+  "about": {
+    "title": "From Patient to Pioneer",
+    "transformation": "My Transformation", 
+    "mission": "Mission",
+    "experience": "Experience"
+  },
+  "blog": {
+    "title": "AI Health Blog",
+    "subtitle": "Insights on AI, health and transformation",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "author": "By",
+    "tags": "Tags",
+    "categories": "Categories",
+    "search": "Search articles...",
+    "noResults": "No articles found",
+    "loading": "Loading articles...",
+    "featured": "Featured",
+    "latest": "Latest Posts",
+    "all": "All Articles"
+  },
+  "lab": {
+    "title": "AI Research Lab",
+    "subtitle": "Cutting-edge AI health research and tools",
+    "gpt5": "GPT-5 Health Research",
+    "tools": "AI Tools", 
+    "community": "Developer Community"
+  },
+  "services": {
+    "title": "Smart Health Consulting",
+    "subtitle": "AI-driven health solutions for organizations",
+    "strategy": "AI Strategy",
+    "implementation": "Implementation",
+    "training": "Training & Workshops"
+  },
+  "footer": {
+    "tagline": "From healthcare to health creation",
+    "contact": "Contact",
+    "social": "Follow Me",
+    "newsletter": "Newsletter",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "retry": "Try Again", 
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "language": {
+    "switch": "Schakel naar Nederlands",
+    "current": "English"
+  }
+}

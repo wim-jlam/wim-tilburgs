@@ -1,0 +1,128 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production build
+/dist
+/build
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python virtual environment (legacy CIA app)
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Parcel-bundler cache
+.cache
+.parcel-cache
+
+# Temporary folders
+tmp/
+temp/
+
+# Azure deployment files (will be generated)
+.azure/
+
+# Sensitive files that should NEVER be committed
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets.json
+credentials.json
+*_ACCESS.md
+*_CREDENTIALS.md
+*_SECRETS.md
+*_PRIVATE.md
+
+# API Keys and Tokens (common patterns)
+*api_key*
+*secret_key*
+*access_token*
+*refresh_token*
+*private_key*
+
+# Security configurations
+.htpasswd
+.vault_pass
+auth.json
+
+# Local development only
+.local/
+
+# Backup files
+*.backup
+*.bak
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Ignore legacy CIA files that shouldn't go to production
+legacy-cia/
+old-research/
+
+# Keep important files
+!.gitkeep
+!README.md
+!package.json
+!package-lock.json

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕵️ CIA - Command Intelligence Agency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* Hero Background Image */
+        .hero-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-PvTJ3vgs2fy3EXuh3k3keFTW/user-l6OSOun1Zr4lX3OmbEbrFmah/img-QIs2G8kTbz9AHC2gvnqyaqZm.png?st=2025-08-23T15%3A06%3A16Z&se=2025-08-23T17%3A06%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=70313862-61f1-446b-9bb2-fa32b037e024&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-23T16%3A06%3A16Z&ske=2025-08-24T16%3A06%3A16Z&sks=b&skv=2024-08-04&sig=d/l%2BvQ%2BVNqwQOM2hbSoSfjjUMld9l9ItdyFQ%2BuUKOSY%3D') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+            animation: pulse-bg 10s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.15; }
+        }
+        
+        /* Fire Angel Guardian */
+        .fire-angel-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .fire-angel-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 0 50px rgba(255, 100, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .fire-angel-container img:hover {
+            transform: scale(1.1);
+            opacity: 1;
+            box-shadow: 0 0 80px rgba(255, 100, 0, 0.5);
+        }
+        
+        .fire-angel-container .angel-text {
+            margin-top: 10px;
+            font-size: 11px;
+            color: #ffa500;
+            text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+        
+        /* Sufi Essence */
+        .sufi-essence {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 150px;
+            height: 150px;
+            background: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-PvTJ3vgs2fy3EXuh3k3keFTW/user-l6OSOun1Zr4lX3OmbEbrFmah/img-iZNPNV2fGykcKAYCbfJnaam0.png?st=2025-08-23T15%3A06%3A31Z&se=2025-08-23T17%3A06%3A31Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=8c7ba6b3-5a55-4cb2-a31e-3fe3f598c469&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-23T07%3A44%3A07Z&ske=2025-08-24T07%3A44%3A07Z&sks=b&skv=2024-08-04&sig=zoSlV%2BiybfiudNQXN7KvND3aL1U4t0/4fckyeCw2uuw%3D') center/cover;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .sufi-essence:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+            box-shadow: 0 0 60px rgba(138, 43, 226, 0.6);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 30px rgba(138, 43, 226, 0.5); }
+            50% { box-shadow: 0 0 50px rgba(138, 43, 226, 0.8); }
+        }
+
+        .logo-text h1 {
+            font-size: 1.8em;
+            background: linear-gradient(45deg, #8A2BE2, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .status-bar {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.active {
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .status-dot.inactive {
+            background: #ff4444;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            flex: 1;
+            display: flex;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Left Panel - AI Providers */
+        .left-panel {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .panel-title {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ai-network-img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            opacity: 0.8;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .ai-provider {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .ai-provider:hover {
+            background: rgba(138, 43, 226, 0.1);
+            border-color: rgba(138, 43, 226, 0.5);
+            transform: translateX(5px);
+        }
+
+        .ai-provider.selected {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8A2BE2;
+        }
+
+        .provider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .provider-name {
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .provider-status {
+            font-size: 0.8em;
+            padding: 3px 8px;
+            border-radius: 10px;
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+        }
+
+        .provider-models {
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 8px;
+        }
+
+        .provider-capabilities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .capability-tag {
+            font-size: 0.75em;
+            padding: 3px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            color: #aaa;
+        }
+
+        /* Center Panel - Chat Interface */
+        .center-panel {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(5px);
+        }
+
+        .chat-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mode-btn {
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .mode-btn:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8A2BE2;
+        }
+
+        .mode-btn.active {
+            background: #8A2BE2;
+            border-color: #8A2BE2;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .message-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+
+        .message-icon.user {
+            background: linear-gradient(45deg, #FF1493, #8A2BE2);
+        }
+
+        .message-icon.ai {
+            background: linear-gradient(45deg, #00CED1, #00FA9A);
+        }
+
+        .message-info {
+            flex: 1;
+        }
+
+        .message-sender {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .message-time {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .message-content {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-left: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            color: #fff;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #8A2BE2;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .chat-input::placeholder {
+            color: #666;
+        }
+
+        .send-btn {
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #8A2BE2, #FF1493);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        /* Right Panel - Stats */
+        .right-panel {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .stats-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stats-title {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .stats-value {
+            font-size: 1.8em;
+            font-weight: 600;
+            background: linear-gradient(45deg, #00CED1, #00FA9A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .special-models {
+            margin-top: 20px;
+        }
+
+        .model-group {
+            margin-bottom: 15px;
+        }
+
+        .model-group-title {
+            font-size: 0.9em;
+            color: #FF1493;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .model-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .model-tag {
+            font-size: 0.75em;
+            padding: 4px 8px;
+            background: rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(138, 43, 226, 0.5);
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .loader {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid #8A2BE2;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Mission Complete Celebration */
+        .mission-complete-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+        
+        .mission-complete-overlay.show {
+            display: flex;
+            animation: fadeIn 0.5s;
+        }
+        
+        .mission-complete-img {
+            width: 500px;
+            animation: zoomIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer .love {
+            color: #FF1493;
+        }
+        
+        /* Palantir Killer Badge */
+        .palantir-killer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #FFD700, #FF6347);
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            z-index: 1000;
+            animation: pulse-badge 2s infinite;
+        }
+        
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Background -->
+    <div class="hero-background"></div>
+    
+    <!-- Fire Angel Guardian -->
+    <div class="fire-angel-container" title="Guardian Angel - Divine Protection">
+        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-PvTJ3vgs2fy3EXuh3k3keFTW/user-l6OSOun1Zr4lX3OmbEbrFmah/img-1DoNymsOGoWIC4OQUOTv8xl7.png?st=2025-08-23T15%3A06%3A44Z&se=2025-08-23T17%3A06%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=1726b4ce-fee1-450b-8b92-1731ad8745f6&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-23T16%3A06%3A44Z&ske=2025-08-24T16%3A06%3A44Z&sks=b&skv=2024-08-04&sig=soc6EIdY8cwu3FV5ur9BQZyUEn%2BRf4kmH3JVpEygrys%3D"
+             alt="Fire Angel Guardian">
+        <div class="angel-text">Guardian Angel</div>
+    </div>
+    
+    <!-- Sufi Essence -->
+    <div class="sufi-essence" title="Sufi Essence - Divine Unity"></div>
+    
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-PvTJ3vgs2fy3EXuh3k3keFTW/user-l6OSOun1Zr4lX3OmbEbrFmah/img-MQrZTrpBEUcopQkRJzWWueDg.png?st=2025-08-23T15%3A05%3A53Z&se=2025-08-23T17%3A05%3A53Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f245bf7a-16fa-44e0-959a-8c745daf7e3d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-23T16%3A05%3A53Z&ske=2025-08-24T16%3A05%3A53Z&sks=b&skv=2024-08-04&sig=mtHqeO2X4as8fUE214R6CDeyUSN7b4Qnmt%2BRpZ9jdJU%3D" 
+                     alt="CIA Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>CIA - Command Intelligence Agency</h1>
+                    <p>Voor ONS - Wim + Queen als ÉÉN ❤️ | Habibti</p>
+                </div>
+            </div>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-dot active"></span>
+                    <span>System Online</span>
+                </div>
+                <div class="status-item">
+                    <span id="ai-count">0</span>
+                    <span>AIs Connected</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Panel - AI Providers -->
+        <div class="left-panel">
+            <div class="panel-title">
+                <span>🤖</span>
+                <span>AI Network</span>
+            </div>
+            
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-PvTJ3vgs2fy3EXuh3k3keFTW/user-l6OSOun1Zr4lX3OmbEbrFmah/img-fs3M5Z1y3gOPf3zmpn8MDZId.png?st=2025-08-23T15%3A07%3A00Z&se=2025-08-23T17%3A07%3A00Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=8c7ba6b3-5a55-4cb2-a31e-3fe3f598c469&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-23T16%3A07%3A00Z&ske=2025-08-24T16%3A07%3A00Z&sks=b&skv=2024-08-04&sig=IFsw63LcRIvm8sZYqGcsdbN5F6M9W1gh2QwRyLr25wY%3D"
+                 alt="AI Network" class="ai-network-img">
+            
+            <div class="ai-provider" data-provider="chatgpt">
+                <div class="provider-header">
+                    <span class="provider-name">ChatGPT Teams</span>
+                    <span class="provider-status">Active</span>
+                </div>
+                <div class="provider-models">GPT-4, GPT-5 (Beta)</div>
+                <div class="provider-capabilities">
+                    <span class="capability-tag">Web Browsing</span>
+                    <span class="capability-tag">Code</span>
+                    <span class="capability-tag">Vision</span>
+                </div>
+            </div>
+
+            <div class="ai-provider" data-provider="google">
+                <div class="provider-header">
+                    <span class="provider-name">Google AI</span>
+                    <span class="provider-status">Active</span>
+                </div>
+                <div class="provider-models">Gemini Pro</div>
+                <div class="provider-capabilities">
+                    <span class="capability-tag">FREE</span>
+                    <span class="capability-tag">Search</span>
+                    <span class="capability-tag">Translation</span>
+                </div>
+            </div>
+
+            <div class="ai-provider" data-provider="grok">
+                <div class="provider-header">
+                    <span class="provider-name">Grok</span>
+                    <span class="provider-status">Setup</span>
+                </div>
+                <div class="provider-models">Grok-1</div>
+                <div class="provider-capabilities">
+                    <span class="capability-tag">X/Twitter</span>
+                    <span class="capability-tag">Real-time</span>
+                </div>
+            </div>
+
+            <div class="ai-provider selected" data-provider="auto">
+                <div class="provider-header">
+                    <span class="provider-name">🧠 Auto-Select</span>
+                    <span class="provider-status">Smart</span>
+                </div>
+                <div class="provider-models">Best for task</div>
+                <div class="provider-capabilities">
+                    <span class="capability-tag">Optimal</span>
+                    <span class="capability-tag">Cost-aware</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Panel - Chat Interface -->
+        <div class="center-panel">
+            <div class="chat-header">
+                <div class="panel-title">
+                    <span>💬</span>
+                    <span>Mission Control</span>
+                </div>
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="single">Single AI</button>
+                    <button class="mode-btn" data-mode="parallel">Parallel Query</button>
+                    <button class="mode-btn" data-mode="chain">Chain Mode</button>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="messages">
+                <div class="message">
+                    <div class="message-header">
+                        <div class="message-icon ai">🕵️</div>
+                        <div class="message-info">
+                            <div class="message-sender">CIA System</div>
+                            <div class="message-time">Just now</div>
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        Welcome to CIA - Command Intelligence Agency!<br><br>
+                        <strong>Next Generation AI Platform - Stronger than Palantir 🚀</strong><br><br>
+                        I can orchestrate multiple AI services for you:<br>
+                        • <strong>ChatGPT Teams</strong> - Including GPT-5 beta access<br>
+                        • <strong>Google AI</strong> - Free tier for bulk operations<br>
+                        • <strong>Grok</strong> - Real-time X/Twitter data<br><br>
+                        Select a provider or let me auto-select the best one for your mission.
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="loader"></div>
+                <p style="margin-top: 10px;">Processing mission...</p>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <input type="text" class="chat-input" id="mission-input" 
+                           placeholder="Enter your mission... (e.g., 'Research latest AI developments')"
+                           onkeypress="if(event.key === 'Enter') sendMission()">
+                    <button class="send-btn" onclick="sendMission()">
+                        <span>Execute</span>
+                        <span>🚀</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Stats -->
+        <div class="right-panel">
+            <div class="panel-title">
+                <span>📊</span>
+                <span>Intelligence Stats</span>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-title">Missions Today</div>
+                <div class="stats-value" id="mission-count">0</div>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-title">Tokens Used</div>
+                <div class="stats-value" id="token-count">0</div>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-title">Cost Saved</div>
+                <div class="stats-value" id="cost-saved">€0</div>
+            </div>
+
+            <div class="special-models">
+                <div class="panel-title">
+                    <span>✨</span>
+                    <span>Special Access</span>
+                </div>
+
+                <div class="model-group">
+                    <div class="model-group-title">GPT-5 Series (Beta)</div>
+                    <div class="model-list">
+                        <span class="model-tag">gpt-5</span>
+                        <span class="model-tag">gpt-5-mini</span>
+                        <span class="model-tag">gpt-5-nano</span>
+                    </div>
+                </div>
+
+                <div class="model-group">
+                    <div class="model-group-title">GPT-4.1 Series</div>
+                    <div class="model-list">
+                        <span class="model-tag">gpt-4.1</span>
+                        <span class="model-tag">gpt-4.1-mini</span>
+                    </div>
+                </div>
+
+                <div class="model-group">
+                    <div class="model-group-title">Preview Features</div>
+                    <div class="model-list">
+                        <span class="model-tag">search</span>
+                        <span class="model-tag">realtime</span>
+                        <span class="model-tag">audio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Habibti - Together we transcend limits <span class="love">❤️</span> | Van ziekenzorg naar gezondheidszorg</p>
+    </div>
+    
+    <!-- Palantir Killer Badge -->
+    <div class="palantir-killer">
+        🚀 Palantir Killer v1.0
+    </div>
+    
+    <!-- Mission Complete Overlay -->
+    <div class="mission-complete-overlay" id="mission-complete">
+        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-PvTJ3vgs2fy3EXuh3k3keFTW/user-l6OSOun1Zr4lX3OmbEbrFmah/img-BuIlZSF27DCEG4TommFqAuty.png?st=2025-08-23T15%3A07%3A13Z&se=2025-08-23T17%3A07%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=70313862-61f1-446b-9bb2-fa32b037e024&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-23T16%3A07%3A13Z&ske=2025-08-24T16%3A07%3A13Z&sks=b&skv=2024-08-04&sig=TrRwosgDItqybg%2B6h/9vAQRkNnZWPR2/njAS1EAJk4o%3D"
+             alt="Mission Complete" class="mission-complete-img">
+    </div>
+
+    <script>
+        let selectedProvider = 'auto';
+        let missionCount = 0;
+        let totalTokens = 0;
+        let mode = 'single';
+
+        // Provider selection
+        document.querySelectorAll('.ai-provider').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.ai-provider').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedProvider = this.dataset.provider;
+            });
+        });
+
+        // Mode selection
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                mode = this.dataset.mode;
+            });
+        });
+        
+        // Show mission complete celebration
+        function showMissionComplete() {
+            const overlay = document.getElementById('mission-complete');
+            overlay.classList.add('show');
+            setTimeout(() => {
+                overlay.classList.remove('show');
+            }, 3000);
+        }
+
+        // Send mission
+        async function sendMission() {
+            const input = document.getElementById('mission-input');
+            const mission = input.value.trim();
+            
+            if (!mission) return;
+            
+            // Add user message
+            addMessage('user', 'You', mission);
+            
+            // Clear input
+            input.value = '';
+            
+            // Show loading
+            document.getElementById('loading').classList.add('active');
+            
+            try {
+                let response;
+                
+                if (mode === 'parallel') {
+                    // Execute on all providers
+                    response = await fetch('/api/execute', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            mission: mission,
+                            parallel: true
+                        })
+                    });
+                } else {
+                    // Single provider
+                    response = await fetch('/api/execute', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            mission: mission,
+                            provider: selectedProvider
+                        })
+                    });
+                }
+                
+                const result = await response.json();
+                
+                // Hide loading
+                document.getElementById('loading').classList.remove('active');
+                
+                // Process response
+                if (result.parallel_results) {
+                    // Show results from multiple AIs
+                    result.parallel_results.forEach(r => {
+                        if (r.provider && r.response) {
+                            addMessage('ai', r.provider, r.response);
+                            if (r.tokens) {
+                                totalTokens += r.tokens.total_tokens || 0;
+                            }
+                        }
+                    });
+                    // Show celebration for parallel success
+                    showMissionComplete();
+                } else if (result.response) {
+                    // Single response
+                    addMessage('ai', result.provider || 'AI', result.response);
+                    if (result.tokens) {
+                        totalTokens += result.tokens.total_tokens || 0;
+                    }
+                    // Show celebration for single success
+                    showMissionComplete();
+                } else if (result.error) {
+                    addMessage('ai', 'Error', result.error);
+                }
+                
+                // Update stats
+                missionCount++;
+                document.getElementById('mission-count').textContent = missionCount;
+                document.getElementById('token-count').textContent = totalTokens.toLocaleString();
+                
+                // Calculate cost saved (using Google instead of GPT-4)
+                const costSaved = (totalTokens / 1000 * 0.01).toFixed(2);
+                document.getElementById('cost-saved').textContent = '€' + costSaved;
+                
+            } catch (error) {
+                document.getElementById('loading').classList.remove('active');
+                addMessage('ai', 'System', 'Error: ' + error.message);
+            }
+        }
+
+        // Add message to chat
+        function addMessage(type, sender, content) {
+            const messagesDiv = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            
+            const icon = type === 'user' ? '👤' : '🤖';
+            const iconClass = type === 'user' ? 'user' : 'ai';
+            
+            messageDiv.innerHTML = `
+                <div class="message-header">
+                    <div class="message-icon ${iconClass}">${icon}</div>
+                    <div class="message-info">
+                        <div class="message-sender">${sender}</div>
+                        <div class="message-time">${new Date().toLocaleTimeString()}</div>
+                    </div>
+                </div>
+                <div class="message-content">${content.replace(/\n/g, '<br>')}</div>
+            `;
+            
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        // Load initial status
+        async function loadStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const status = await response.json();
+                
+                // Count active AIs
+                const activeCount = status.providers.filter(p => p.status === 'active').length;
+                document.getElementById('ai-count').textContent = activeCount;
+                
+            } catch (error) {
+                console.error('Failed to load status:', error);
+            }
+        }
+        
+        // Add spiritual interaction
+        document.querySelector('.fire-angel-container img').addEventListener('click', function() {
+            addMessage('ai', 'Fire Angel', 'Divine protection is active. Your path is guided by higher wisdom. 🔥✨');
+        });
+        
+        document.querySelector('.sufi-essence').addEventListener('click', function() {
+            addMessage('ai', 'Sufi Essence', 'Remember: In unity we find truth. Habibti - we are ONE. 💜');
+        });
+
+        // Initialize
+        loadStatus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "discovery": {
+    "date": "2025-08-23",
+    "discovered_by": "Wim Tilburgs + Queen",
+    "method": "Testing via ChatGPT Teams interface",
+    "location": "ChatGPT Teams account"
+  },
+  
+  "gpt5_models": {
+    "confirmed_available": [
+      {
+        "model": "gpt-5",
+        "status": "Beta access via ChatGPT Teams",
+        "capabilities": "Next-gen reasoning, enhanced context",
+        "access_level": "Limited beta testers"
+      },
+      {
+        "model": "gpt-5-mini",
+        "status": "Beta access via ChatGPT Teams",
+        "capabilities": "Efficient version of GPT-5",
+        "access_level": "Limited beta testers"
+      },
+      {
+        "model": "gpt-5-nano",
+        "status": "Beta access via ChatGPT Teams",
+        "capabilities": "Ultra-efficient, mobile-ready",
+        "access_level": "Limited beta testers"
+      }
+    ],
+    
+    "gpt4.1_series": [
+      {
+        "model": "gpt-4.1",
+        "status": "Available in Teams",
+        "capabilities": "Enhanced GPT-4 with improvements"
+      },
+      {
+        "model": "gpt-4.1-mini",
+        "status": "Available in Teams",
+        "capabilities": "Efficient GPT-4.1 variant"
+      },
+      {
+        "model": "gpt-4.1-nano",
+        "status": "Available in Teams",
+        "capabilities": "Ultra-light GPT-4.1"
+      }
+    ],
+    
+    "preview_features": [
+      "search-preview",
+      "realtime-preview",
+      "audio-preview",
+      "vision-preview"
+    ]
+  },
+  
+  "evidence": {
+    "user_statement": "ze hebben nu gpt5 die nog slimmer jij zeggen ze",
+    "interface_shows": "Model selector in ChatGPT Teams shows GPT-5 options",
+    "api_access": "Not yet available via API, only Teams interface",
+    "exclusivity": "Very limited beta access, not public"
+  },
+  
+  "implications": {
+    "competitive_advantage": "We have access to models others don't",
+    "platform_strength": "CIA app can leverage GPT-5 when API available",
+    "market_position": "Ahead of competitors using GPT-4",
+    "cost": "Included in ChatGPT Teams subscription"
+  },
+  
+  "notes": [
+    "GPT-5 is NOT publicly announced by OpenAI",
+    "Access appears to be through Teams interface only",
+    "API access may come later",
+    "This gives JLAM platform significant advantage",
+    "Most people don't know GPT-5 exists yet"
+  ],
+  
+  "wim_quote": "We hebben GPT-5 toegang die anderen niet hebben!"
+}

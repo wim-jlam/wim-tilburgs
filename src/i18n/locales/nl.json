@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over Mij",
+    "blog": "Blog",
+    "lab": "AI Lab",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Wim Tilburgs",
+    "subtitle": "Smart Health AI Consultant",
+    "tagline": "Van 125kg diabeet naar AI health pioneer",
+    "description": "Van patiënt naar pioneer. Ontdek hoe ik diabetes overwon en nu AI inzet voor revolutionaire gezondheidszorg oplossingen.",
+    "cta": {
+      "primary": "Ontdek Mijn Verhaal",
+      "secondary": "Bekijk AI Research"
+    }
+  },
+  "about": {
+    "title": "Van Patiënt naar Pioneer",
+    "transformation": "Mijn Transformatie",
+    "mission": "Missie",
+    "experience": "Ervaring"
+  },
+  "blog": {
+    "title": "AI Health Blog",
+    "subtitle": "Inzichten over AI, gezondheid en transformatie",
+    "readMore": "Lees Meer",
+    "publishedOn": "Gepubliceerd op",
+    "author": "Door",
+    "tags": "Tags",
+    "categories": "Categorieën",
+    "search": "Zoek artikelen...",
+    "noResults": "Geen artikelen gevonden",
+    "loading": "Artikelen laden...",
+    "featured": "Uitgelicht",
+    "latest": "Nieuwste Posts",
+    "all": "Alle Artikelen"
+  },
+  "lab": {
+    "title": "AI Research Lab",
+    "subtitle": "Cutting-edge AI health research en tools",
+    "gpt5": "GPT-5 Health Research",
+    "tools": "AI Tools",
+    "community": "Developer Community"
+  },
+  "services": {
+    "title": "Smart Health Consulting",
+    "subtitle": "AI-gedreven gezondheidsoplossingen voor organisaties",
+    "strategy": "AI Strategy",
+    "implementation": "Implementatie",
+    "training": "Training & Workshops"
+  },
+  "footer": {
+    "tagline": "Van ziekenzorg naar gezondheidszorg",
+    "contact": "Contact",
+    "social": "Volg Mij",
+    "newsletter": "Nieuwsbrief",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout opgetreden",
+    "retry": "Probeer Opnieuw",
+    "close": "Sluiten",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "submit": "Versturen",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige"
+  },
+  "language": {
+    "switch": "Switch to English",
+    "current": "Nederlands"
+  }
+}
