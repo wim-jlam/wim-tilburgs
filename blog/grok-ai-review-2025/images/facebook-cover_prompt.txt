@@ -1,0 +1,11 @@
+Image: facebook-cover
+Size: 1792x1024
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Create a Facebook cover image announcing 'I switched from ChatGPT to Grok AI'.
+            Show a person's silhouette walking away from a corporate ChatGPT building 
+            towards a vibrant, edgy Grok/X headquarters.
+            Include visual metaphor of liberation/freedom.
+            Style: Storytelling, emotional, shareable on Facebook.

@@ -1,0 +1,14 @@
+Image: comparison-chart
+Size: 1024x1024
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Design a visually striking comparison infographic: Grok AI vs ChatGPT vs Claude vs Gemini.
+            Show four AI entities/robots in a lineup, each with distinct personalities:
+            - Grok: Rebellious, edgy, X blue
+            - ChatGPT: Corporate, polished, green
+            - Claude: Thoughtful, purple
+            - Gemini: Colorful, Google colors
+            Include visual indicators for: price tags (€8 vs €20), real-time data capability, humor level.
+            Style: Clean infographic style, easy to understand at a glance.

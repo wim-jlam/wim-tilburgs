@@ -1,0 +1,11 @@
+Image: twitter-card
+Size: 1024x1024
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Create a viral-worthy Twitter/X card image for Grok AI article. 
+            Show Grok as a mischievous AI entity emerging from the X logo, surrounded by trending tweets 
+            and real-time data visualizations. Include subtle humor - maybe Grok winking or making a face.
+            Colors: X brand blue, black, white with electric accents.
+            Style: Meme-able but professional, highly shareable.

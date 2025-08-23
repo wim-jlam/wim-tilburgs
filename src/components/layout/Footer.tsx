@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               </div>
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">
-              {t('footer.tagline')} - Van 125kg diabeet naar AI health pioneer.
+              {t('footer.tagline')} - Van diabeet naar AI health pioneer.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (

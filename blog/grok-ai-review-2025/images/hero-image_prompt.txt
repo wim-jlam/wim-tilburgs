@@ -1,0 +1,12 @@
+Image: hero-image
+Size: 1792x1024
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Create a stunning hero image for a tech blog article about Grok AI vs ChatGPT. 
+            Show a futuristic battle scene between two AI entities - one representing Grok (edgy, rebellious, 
+            with X/Twitter blue accents) and one representing ChatGPT (corporate, polished, green accents). 
+            Include subtle references to Elon Musk (Tesla, SpaceX elements). 
+            Style: Modern, dramatic, tech-focused, professional blog header.
+            Text overlay areas should be left clear for article title.

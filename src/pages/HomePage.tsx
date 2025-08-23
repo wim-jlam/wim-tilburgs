@@ -116,7 +116,7 @@ const HomePage: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Diabetes Pioneer</h3>
               <p className="text-gray-600">
-                Personal journey from 125kg diabetic to medicine-free health expert, helping 2000+ people reverse diabetes.
+                Personal journey from diabetic to medicine-free health expert, helping 2000+ people reverse diabetes.
               </p>
             </div>
 

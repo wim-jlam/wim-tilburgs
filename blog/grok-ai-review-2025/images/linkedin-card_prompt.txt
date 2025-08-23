@@ -1,0 +1,12 @@
+Image: linkedin-card
+Size: 1024x1024
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Design a eye-catching LinkedIn social media card for sharing an article about Grok AI. 
+            Feature the Grok logo/mascot in a dynamic pose with X (Twitter) bird logo integrated. 
+            Background: Gradient from X blue to purple. 
+            Include visual elements suggesting real-time data streams and social media connections.
+            Style: Professional but edgy, tech-forward, shareable.
+            Leave space for text overlay.

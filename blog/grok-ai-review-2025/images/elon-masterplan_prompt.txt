@@ -1,0 +1,11 @@
+Image: elon-masterplan
+Size: 1792x1024
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Illustrate Elon Musk's AI masterplan with X/Twitter at the center. 
+            Show Elon as a chess master moving pieces on a board where the pieces are: 
+            X logo, Tesla car, SpaceX rocket, Neuralink chip, all connecting to a central Grok AI brain.
+            Background: Space/stars suggesting universal ambition.
+            Style: Editorial illustration, slightly dramatic, business magazine quality.

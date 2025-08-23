@@ -1,0 +1,11 @@
+Image: instagram-story
+Size: 1024x1792
+Quality: HD
+
+DALL-E 3 Prompt:
+============================================================
+Design a vertical Instagram story image for Grok AI article promotion.
+            Feature a smartphone with X app open showing Grok AI interface.
+            Surround with comic-style speech bubbles containing provocative Grok responses.
+            Price tag showing '€8/month' prominently.
+            Style: Mobile-first, Instagram aesthetic, young and trendy, high contrast.
