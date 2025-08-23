@@ -53,7 +53,7 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: "build"
+          output_location: "dist"
         env:
           # AI-controlled environment variables
           NODE_ENV: production
