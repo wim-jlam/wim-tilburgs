@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
             {t('about.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Van diabeet naar AI health pioneer - mijn transformatiereis
+            Van Patiënt naar Actiënt® - Een Veteraan met een Missie
           </p>
         </div>
         
