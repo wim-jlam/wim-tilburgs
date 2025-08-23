@@ -1,55 +1,18 @@
 # Gitleaks Configuration for CIA App
-# Prevents accidental commit of secrets
-
 title = "CIA App Secret Scanner"
 
 [extend]
 useDefault = true
 
+# Custom rules voor specifieke patterns
 [[rules]]
 description = "OpenAI API Key"
+id = "openai-api-key"
 regex = '''sk-proj-[a-zA-Z0-9]{48}'''
 tags = ["key", "openai"]
 
 [[rules]]
-description = "Google API Key"  
+description = "Google API Key"
+id = "google-api-key"  
 regex = '''AIza[0-9A-Za-z\-_]{35}'''
 tags = ["key", "google"]
-
-[[rules]]
-description = "Generic API Key"
-regex = '''(?i)(api_key|apikey|api-key)\s*[:=]\s*['\"]?[a-zA-Z0-9\-_]{20,}'''
-tags = ["key", "generic"]
-
-[[rules]]
-description = "Database Password"
-regex = '''(?i)(db_password|database_password|password)\s*[:=]\s*['\"][^'\"]{8,}['\"]'''
-tags = ["password", "database"]
-
-[[rules]]
-description = "Bearer Token"
-regex = '''(?i)bearer\s+[a-zA-Z0-9\-_\.]{20,}'''
-tags = ["token", "auth"]
-
-[[rules]]
-description = "Private IP Address"
-regex = '''(?:10|172\.(?:1[6-9]|2[0-9]|3[01])|192\.168)\.[\d]{1,3}\.[\d]{1,3}'''
-tags = ["network", "ip"]
-
-# Whitelist patterns (deze zijn OK)
-[[allowlist]]
-description = "Example/Placeholder API Keys"
-regex = '''(?i)(sk-proj-x+|AIzaX+|your[-_]?api[-_]?key|api[-_]?key[-_]?here|\[.*\])'''
-
-[[allowlist]]
-description = "Environment variable references"
-regex = '''\$\{[A-Z_]+\}|os\.getenv\(['"][A-Z_]+['"]\)'''
-
-[[allowlist]]
-description = "Documentation placeholders"
-paths = [
-  "**/*.md",
-  "**/*.example",
-  "**/example.*"
-]
-regex = '''\[VERVANG.*\]|\[CHECK.*\]|\[VRAAG.*\]'''

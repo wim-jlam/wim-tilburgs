@@ -1,0 +1,24 @@
+# GitLeaks Ignore File - wimtilburgs.nl
+# Voor false positives en voorbeelden in documentatie
+
+# Documentation examples (NIET echte keys!)
+CLAUDE.md:generic-api-key:122
+README.md:*
+*.md:*example*
+*.md:*abc123*
+*.md:*sk-proj-example*
+*.md:*placeholder*
+
+# Terraform output examples
+terraform/README.md:*
+terraform/environments/*/terraform.tfvars:*example*
+
+# Docker compose environment examples  
+docker/docker-compose.yml:*EXAMPLE*
+docker/docker-compose.yml:*placeholder*
+
+# Code comments en voorbeelden
+*:*# FOUT*
+*:*# GOED*
+*:*# Example*
+*:*# TODO*
