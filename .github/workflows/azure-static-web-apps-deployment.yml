@@ -1,0 +1,77 @@
+# 🤖 AI-Generated Azure Static Web Apps Deployment
+# Volledig geautomatiseerd door Claude Code AI
+# Target: https://black-hill-03e334903.2.azurestaticapps.net
+
+name: 🚀 AI-Controlled Azure Static Web Apps Deployment
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches: [main]
+  workflow_dispatch:  # Manual trigger voor AI
+
+jobs:
+  ai_build_and_deploy:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: 🤖 AI Build and Deploy
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 📦 Install Dependencies  
+        run: |
+          echo "🤖 AI Installing dependencies..."
+          npm ci
+          
+      - name: 🏗️ Build React Application
+        run: |
+          echo "🤖 AI Building wimtilburgs.nl platform..."
+          npm run build
+        env:
+          CI: false
+          REACT_APP_ENVIRONMENT: production
+          REACT_APP_VERSION: 1.0.0
+          REACT_APP_API_URL: https://api.wimtilburgs.nl
+          
+      - name: 🚀 AI Deploy to Azure Static Web Apps
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/"
+          api_location: ""
+          output_location: "build"
+        env:
+          # AI-controlled environment variables
+          NODE_ENV: production
+          
+      - name: 🎯 AI Deployment Success
+        run: |
+          echo "🤖 AI successfully deployed wimtilburgs.nl!"
+          echo "📍 Live URL: https://black-hill-03e334903.2.azurestaticapps.net"
+          echo "🎨 Built entirely with AI: GPT-5 + Claude + Gemini + DALL-E"
+
+  ai_close_pull_request:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: 🤖 AI Close Pull Request
+    steps:
+      - name: 🧹 AI Cleanup Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "close"
