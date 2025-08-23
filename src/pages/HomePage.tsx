@@ -76,20 +76,6 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
               </div>
               
-              {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">125kg → 85kg</div>
-                    <div className="text-sm text-gray-600">40kg weight loss</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
