@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -44,6 +45,14 @@ module.exports = (env, argv) => {
           description: 'AI Health Innovation Expert | Diabetes Pioneer | GPT-5 Research',
           keywords: 'Wim Tilburgs, AI health, diabetes, GPT-5, smart health, consultant',
         },
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'public/staticwebapp.config.json',
+            to: 'staticwebapp.config.json',
+          },
+        ],
       }),
     ],
     devServer: {
