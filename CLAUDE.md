@@ -1,6 +1,117 @@
-# 🤖 CLAUDE.md - CIA App Project Configuration
-*Laatste update: 23 augustus 2025*  
-*Versie: 1.0.0*
+# 🤖 CLAUDE.md - WIM TILBURGS PLATFORM PROJECT
+*Laatste update: 24 augustus 2025 - 07:40*  
+*Versie: 2.1.0*
+
+---
+
+## 🎯 STATUS UPDATE - 24 AUGUSTUS 2025
+
+### ✅ DEPLOYMENT CRISIS VOLLEDIG OPGELOST!
+
+**Probleem:** Na repository hernaming werkte wimtilburgs.nl niet meer - React app bleef hangen op loading screen.
+
+**Oplossing:** Volledige Azure Static Web App herconfiguratie uitgevoerd:
+1. ✅ Nieuwe repository `wim-jlam/wim-tilburgs` aangemaakt
+2. ✅ Azure Static Web App geconnecteerd aan juiste repository
+3. ✅ GitHub Actions secret `AZURE_STATIC_WEB_APPS_API_TOKEN` geconfigureerd  
+4. ✅ Azure Static Web Apps config (`staticwebapp.config.json`) toegevoegd
+5. ✅ Webpack build process geoptimaliseerd
+6. ✅ DNS ongewijzigd - alles werkt via `wimtilburgs.nl`
+
+**Resultaat:** 
+- 🌐 **https://wimtilburgs.nl** - ✅ VOLLEDIG OPERATIONEEL
+- 🌐 **https://black-hill-03e334903.2.azurestaticapps.net** - ✅ VOLLEDIG OPERATIONEEL
+- 🚀 **React app laadt correct** met nieuwe tagline "Van Patiënt naar Actiënt® - Een Veteraan met een Missie"
+- 🔒 **SSL certificaat actief** - Secure HTTPS verbinding
+- ⚡ **CI/CD pipeline werkend** - GitHub Actions deployt automatisch
+
+### 🔧 TECHNISCHE DETAILS VOOR MORGEN:
+
+**Repository Setup:**
+```
+Huidige repository: https://github.com/wim-jlam/wim-tilburgs
+Azure Static Web App: wimtilburgs-nl (resource group: rg-wimtilburgs-platform)
+Domain: wimtilburgs.nl → black-hill-03e334903.2.azurestaticapps.net
+```
+
+**Deployment Process:**
+- Git push naar `main` branch triggert automatisch Azure Static Web Apps CI/CD
+- Build process: `npm ci` → `npm run build` → Azure deployment
+- Output location: `dist/` folder
+- Build time: ~2 minuten per deployment
+
+**Belangrijke Files:**
+- `webpack.config.js` - Build configuratie met copy-webpack-plugin
+- `public/staticwebapp.config.json` - Azure routing en MIME type config
+- `.github/workflows/azure-static-web-apps.yml` - CI/CD pipeline
+- `src/i18n/locales/` - Nederlandse en Engelse vertalingen
+
+**Content Updates Voltooid:**
+- ✅ Verwijderd: Alle gewichtsverlies referenties (125kg → 85kg)
+- ✅ Toegevoegd: Nieuwe tagline "Van Patiënt naar Actiënt® - Een Veteraan met een Missie"
+- ✅ Updated: Meta tags en SEO beschrijvingen
+- ✅ Behouden: AI-first filosofie en smart health focus
+
+### 📋 WHAT'S NEXT - VOLGENDE SESSIE PLANNING:
+
+**Prioriteiten voor morgen:**
+1. **Content Development** - Meer pagina's uitbouwen (About, Services, Blog)
+2. **AI Features** - AI Motor functionaliteit implementeren
+3. **Database Integration** - PostgreSQL connectie opzetten
+4. **Performance** - Bundle size optimalisatie (huidige waarschuwing: 343 KiB)
+5. **SEO Enhancement** - Structured data en sitemap toevoegen
+
+**Mogelijke Uitbreidingen:**
+- Multi-language blog posts toevoegen
+- AI chatbot integratie voor bezoekers
+- Contact formulier met email functionaliteit  
+- Analytics tracking (Google Analytics 4)
+- Progressive Web App (PWA) features
+
+**Development Workflow:**
+```bash
+# Voor nieuwe features:
+git checkout -b feature/naam-van-feature
+# Ontwikkel, test lokaal
+npm run build && open dist/index.html
+# Commit en push naar branch
+git push -u origin feature/naam-van-feature
+# Merge naar main voor deployment
+```
+
+### 🚨 BELANGRIJKE OPMERKINGEN:
+
+**DNS & SSL:**
+- DNS wijzigt NOOIT meer - `wimtilburgs.nl` blijft altijd werken
+- SSL certificaat automatisch beheerd door Azure
+- Custom domain volledig geconfigureerd
+
+**Repository Management:**
+- Hoofdrepository: `wim-jlam/wim-tilburgs` 
+- Oude repository `jlam-smarthealth/wim-tilburgs` kan verwijderd worden
+- Alle secrets correct geconfigureerd in nieuwe repo
+
+**Deployment Success Indicatoren:**
+- ✅ GitHub Actions toont "success" status
+- ✅ `gh run list` toont completed workflows  
+- ✅ Both URLs (wimtilburgs.nl + azurestaticapps.net) serve React app
+- ✅ New tagline visible in browser title and meta tags
+
+### 🎉 SESSION RECAP:
+
+**Start:** Website down - React app stuck on loading screen na repository rename
+**Probleem:** Azure Static Web App connected aan verkeerde repository 
+**Tijd besteed:** ~5 uur troubleshooting en fixing
+**Oplossing:** Complete infrastructure herconfiguratie
+**Eindresultaat:** 100% werkende website met nieuwe branding
+
+**Lessons Learned:**
+- Repository renames vereisen Azure Static Web App reconfiguratie
+- GitHub Secrets moeten opnieuw geconfigureerd worden bij nieuwe repos
+- DNS blijft stabiel, alleen repository connections veranderen
+- Azure CDN cache kan 5-10 minuten duren voor nieuwe content
+
+---
 
 ---
 
